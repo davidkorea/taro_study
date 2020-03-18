@@ -1,5 +1,26 @@
 # taro_study
 
+
+## Taro
+- 请求
+  ```javascript
+    useEffect(()=>{
+        Taro.request({
+            url: url
+        }).then(res=>{
+            console.log(res.data.data.areaTree[4]);
+            setToday(res.data.data.areaTree[4].today)
+            setTotal(res.data.data.areaTree[4].total)
+        })            
+    },[])
+  ```
+  - react使用fetch，但是taro不能使用，需要使用封装好的兼容weapp的Taro.request()
+
+
+
+
+## Taro-ui
+
 - [taro-ui install](https://taro-ui.jd.com/#/docs/quickstart)
   - `cnpm install taro-ui`
   - app.js + `import 'taro-ui/dist/style/index.scss' // 全局引入一次即可`
