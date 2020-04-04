@@ -1,5 +1,20 @@
+## Issue `建议修改：使用循环的 index 变量作为 key 是一种反优化。参考：https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md`
+```javascript
+{
+    dataList && dataList.map((v,i)=>{
+    return <Item key={i} item={v}></Item>
+    })
+}
+```
+```javascript
+{
+    dataList && dataList.map((v,i)=>{
+    return <Item key={i+1} item={v}></Item>
+    })
+}
+```
 
-### Issue: `TypeError: Cannot read property 'map' of undefined`
+## Issue: `TypeError: Cannot read property 'map' of undefined`
 
 ```
 VM5093:1 TypeError: Cannot read property 'map' of undefined
