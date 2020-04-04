@@ -12,6 +12,7 @@
   }
   ```
   - 没测试使用hooks的方式，`setDataList([1,2,3], ()=>{console.log(dataList)})`是否可行
+    - **！！！hooks 不支持同步回调！！！**
 
 
 
