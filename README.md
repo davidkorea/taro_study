@@ -1,6 +1,14 @@
 # taro_study
 
 
+## Taro 使用原生html标签 还是 使用taro/components
+1. 生成h5，使用html标签没问题，可以使用tailwindcss布局
+2. 生成weapp，必须使用taro/components，否则编译无效，且不能使用taro自带组件不能使用tailwind布局
+
+
+
+
+
 ## Taro
 - 请求
   ```javascript
