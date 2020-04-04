@@ -24,7 +24,45 @@
   ```
   - react使用fetch，但是taro不能使用，需要使用封装好的兼容weapp的Taro.request()
 
+## 底端tab标签
+- 提前创建页面目录
+  - src/pages/index/index.jsx  // 默认已创建
+  - src/pages/list/list.js
+- app.jsx文件中添加页面pages配置，以及tabBar的配置，和微信小程序一样
 
+```javascript
+// app.jsx
+
+config = {
+    pages: [
+      'pages/index/index',
+      'pages/list/list'
+    ],
+    window: {
+      backgroundTextStyle: 'light',
+      navigationBarBackgroundColor: '#fff',
+      navigationBarTitleText: 'WeChat',
+      navigationBarTextStyle: 'black'
+    },
+    tabBar: {
+      list: [
+        {
+          pagePath: 'pages/index/index',
+          text: '首页',
+          // iconPath: './images/home.png',
+          // selectedIconPath: './images/homeSelected.png',
+        },
+        {
+          pagePath: 'pages/list/list',
+          text: 'List',
+          // iconPath: './images/mine.png',
+          // selectedIconPath: './images/mineSelected.png',
+        },
+      ],
+    }
+  }
+
+```
 
 
 ## Taro-ui
