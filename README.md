@@ -64,6 +64,21 @@ config = {
 
 ```
 
+- 更改页面上端的页面名称，对于函数组件
+```javascript
+function List(){
+    return(
+       ...
+    )
+}
+
+List.config = {
+    navigationBarTitleText: 'Todo List',
+  }
+
+export default List
+```
+
 
 ## Taro-ui
 
