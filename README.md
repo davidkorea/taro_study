@@ -15,12 +15,14 @@ VM5093:1 TypeError: Cannot read property 'map' of undefined
     at Array.webpackJsonpCallback [as push] (runtime.js:33)
 ```
 ```diff
-{
-                    dataList.map((v,i)=>{
-                    return <Item key={i+1} item={v}></Item>
-                    })
-                }
+const {dataList} = useContext(GlobalContext)
 
+ {
+-    dataList.map((v,i)=>{
++    dataList && dataList.map((v,i)=>{
+     return <Item key={i+1} item={v}></Item>
+     })
+ }
 ```
 
 
