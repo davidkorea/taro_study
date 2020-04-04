@@ -2,6 +2,20 @@
 
 [Taro 小程序开发大型实战（二）：多页面跳转和 Taro UI 组件库](https://taro-club.jd.com/topic/1111/taro-小程序开发大型实战-二-多页面跳转和-taro-ui-组件库)
 
+- setstate时，由于是异步操作，所以set之后，马上执行log会打印出上一次的state
+  - 需要打印出当前刚set之后的新的state，需要在`setState({a:123}, ()=>{consolw.log(this.state)})`
+  ```javascript
+  const handleClick = () => {
+    this.setState({dataList:[1,2,3]}, ()=>{
+      console.log(this.state.dataList)
+    })
+  }
+  ```
+  - 没测试使用hooks的方式，`setDataList([1,2,3], ()=>{console.log(dataList)})`是否可行
+
+
+
+
 # taro_study
 
 
