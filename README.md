@@ -1,3 +1,29 @@
+
+### Issue: `TypeError: Cannot read property 'map' of undefined`
+
+```
+VM5093:1 TypeError: Cannot read property 'map' of undefined
+    at Menu._createData (Menu.js:114)
+    at Object.createComponent (taro.js:2601)
+    at Object../node_modules/@tarojs/mini-runner/dist/loaders/wxTransformerLoader.js?!./src/components/Menu.js?taro&type=script&parse=COMPONENT& (Menu.js:172)
+    at __webpack_require__ (runtime.js:80)
+    at Module../src/components/Menu.js?taro&type=script&parse=COMPONENT& (Menu.js:214)
+    at __webpack_require__ (runtime.js:80)
+    at Module../src/components/Menu.js (Menu.js:197)
+    at __webpack_require__ (runtime.js:80)
+    at checkDeferredModules (runtime.js:46)
+    at Array.webpackJsonpCallback [as push] (runtime.js:33)
+```
+```diff
+{
+                    dataList.map((v,i)=>{
+                    return <Item key={i+1} item={v}></Item>
+                    })
+                }
+
+```
+
+
 [Taro 小程序开发大型实战（一）：熟悉的 React，熟悉的 Hooks](https://taro-club.jd.com/topic/1110/taro-小程序开发大型实战-一-熟悉的-react-熟悉的-hooks)
 
 [Taro 小程序开发大型实战（二）：多页面跳转和 Taro UI 组件库](https://taro-club.jd.com/topic/1111/taro-小程序开发大型实战-二-多页面跳转和-taro-ui-组件库)
