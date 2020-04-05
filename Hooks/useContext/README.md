@@ -5,9 +5,9 @@
 #  1. weapp - Todo List
 <img width="711" src="https://user-images.githubusercontent.com/26485327/78464442-61b0fc80-771c-11ea-92d5-ef9b92122244.png">
 
-<img width="350" src="https://user-images.githubusercontent.com/26485327/78464445-6675b080-771c-11ea-89b8-8573b34c52f7.jpeg">
+<img width="250" src="https://user-images.githubusercontent.com/26485327/78464445-6675b080-771c-11ea-89b8-8573b34c52f7.jpeg">
 
-### 1.1 Pages
+## 1.1 Pages
 
 - src/pages/list/list.jsx
   - weapp必须jsx扩展名，js报错未注册页面啊
@@ -46,7 +46,7 @@ List.config = {
 export default List
 ```
 
-### 1.2 components
+## 1.2 components
 
 #### 1. TodoTabs
 - src/components/TodoTabs.jsx
@@ -126,3 +126,33 @@ function TodoItem(props){
 
 export default TodoItem
 ```
+
+
+## 1.3 React方式单独创建Context组件，更不行！！
+- src/contexts/ListContext.jsx
+```javascript
+import Taro, {useState}  from '@tarojs/taro'
+
+export const GlobalContext =  Taro.createContext()
+
+function GlobalContextProvider(props){
+
+    const [dataList, setDataList] = useState([
+        {context:'hello world', checked:false, delete:false},
+        {context:'hi boy', checked:false, delete:false},
+        {context:'hey girl', checked:false, delete:false},
+        {context:'sup', checked:false, delete:false},
+    ]);
+
+    return (
+        <GlobalContext.Provider value={{dataList}}>
+            {props.children}
+        </GlobalContext.Provider>
+    )
+}
+
+export default GlobalContextProvider
+```
+
+
+
