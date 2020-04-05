@@ -67,7 +67,7 @@ export default class Index extends Taro.Component {
 }
 ```
 
-# 2. taro/component: Inpu
+# 2. taro/component: Input
 
 这个Input组件继承自原生html的input标签，所以获取输入值可以使用`e.target.value`. 但是对于weapp，**事件函数只能是onInput**，而不能是onChange，onKeyDown等原生事件函数
 
