@@ -13,36 +13,33 @@
   - weapp必须jsx扩展名，js报错未注册页面啊
   
 ```javascript
-import Taro, { useState } from '@tarojs/taro'
-import {View, Text} from '@tarojs/components'
-import Menu from '../../components/Menu'
+import Taro, {useState} from '@tarojs/taro'
+import {View} from '@tarojs/components'
+import TodoTabs from '../../components/TodoTabs'
 
-export const GlobalContext =  Taro.createContext()
+export const ListContext = Taro.createContext({})
 
 function List(){
     const [dataList, setDataList] = useState([
-        {content:'hello world', checked:false, delete:false},
+        {content:'hello world', checked:false, delete:true},
         {content:'hi boy', checked:false, delete:false},
         {content:'hey girl', checked:false, delete:false},
         {content:'sup', checked:true, delete:false},
-    ]);
+    ])
 
-    const handleCheck = (idx)=>{
-        dataList[idx].checked = !dataList[idx].checked
-        setDataList([...dataList])
-        
-    }
-    return(
+    return (
         <View className="list">
-            <GlobalContext.Provider value={{dataList, handleCheck}}>
-                <Menu></Menu>
-            </GlobalContext.Provider>
+            <ListContext.Provider value={{dataList}}>
+                <TodoTabs></TodoTabs>
+            </ListContext.Provider>
         </View>
     )
 }
+
 List.config = {
     navigationBarTitleText: 'Todo List',
   }
+
 export default List
 ```
 
