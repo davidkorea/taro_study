@@ -1,0 +1,19 @@
+.post-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 40px;
+}
+
+.add-btn {
+    margin-top: 30px;
+}
+
+.input {
+    height: 50px;
+    width: 92%;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    padding: 15px;
+    box-shadow: 0 0 10px lightgray;
+}
