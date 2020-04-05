@@ -66,6 +66,8 @@ const {dataList} = useContext(GlobalContext)
 ## Taro 使用原生html标签 还是 使用taro/components
 1. 生成h5，使用html标签没问题，可以使用tailwindcss布局
 2. 生成weapp，必须使用taro/components，否则编译无效，且不能使用taro自带组件不能使用tailwind布局
+    - 使用 taro标签
+    - 文件必须使用jsx后缀，不能使用js后缀，否则小程序编译报错『未注册页面』
 
 
 
