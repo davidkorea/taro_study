@@ -1,0 +1,18 @@
+.cart {
+    /* width: 100vw;
+    height: 100%; */
+    display: flex;
+    flex-direction: column;
+    /* background-color: gray; */
+}
+
+.menulist {
+    height: 94vh;
+    overflow: scroll;
+}
+
+.countbar {
+    height: 6vh;
+    position: fixed;
+    bottom: 0;
+}
