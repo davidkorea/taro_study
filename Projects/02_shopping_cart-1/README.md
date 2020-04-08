@@ -3,7 +3,7 @@
 ## 3. usePullDownRefresh hook
 
 
-![Apr-08-2020 15-59-41](https://user-images.githubusercontent.com/26485327/78759333-0b5ceb80-79b2-11ea-9e91-1035d8938a62.gif)
+<img width="300" src="https://user-images.githubusercontent.com/26485327/78759333-0b5ceb80-79b2-11ea-9e91-1035d8938a62.gif">
 
 
 ## 2. src-2 with Order History Function
