@@ -1,0 +1,38 @@
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.name,
+.price,
+.quantity {
+    width: 33%;
+}
+
+.quantity {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.price {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.add,
+.remove,
+.num {
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add,
+.remove {
+    border: 1px solid gray;
+    margin: 0 10px;
+}
