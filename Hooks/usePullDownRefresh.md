@@ -31,7 +31,11 @@ config = {
 Taro.startPullDownRefresh({
     success: ()=>{
         ......
-        Taro.stopPullDownRefresh()
+        Taro.stopPullDownRefresh({
+            success: ()=>{
+                ......
+            }
+        })
     }
 })
 
